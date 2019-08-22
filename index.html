@@ -11,12 +11,17 @@
 	<title>Weather you like it or not</title>
 </head>
 <body>
+
 	<br><br>
 	<div class="container" align="center">
 	<h1>How's the weather?</h1>
 	<h6>Your Location</h6>
-	<input class="form-control" placeholder="London, UK"><br><br>
-	<button class="btn btn-lg btn-primary" type="button">Get the weather</button>
+
+	<form action="weather.html" method = "GET">
+		<input class="form-control" placeholder="London, UK" type="text" name="location"><br><br>
+	
+		<a href="file:///C:/Users/malco/Documents/GitHub/local-weather-project/weather.html"><button class="btn btn-lg btn-primary" type="submit" value="Submit">Get the weather</button><br></a>
+	</form>	
 	</div>
 
 	<!--bootstrap javascript - jquery, popper, bootjs-->
