@@ -38,7 +38,7 @@
 var loc = getParameterByName('location');
 lo = loc.replace(/ +/g, "");
 
-var linkGenerate = "https://api.openweathermap.org/data/2.5/weather?q=" + lo + "&appid=3981c7e96d55ae5a7a83fbe77d0654f5&units=metric"
+var linkGenerate = "http://api.openweathermap.org/data/2.5/weather?q=" + lo + "&appid=3981c7e96d55ae5a7a83fbe77d0654f5&units=metric"
 
 <!--to confirm the link works from the console-->
 //console.log(linkGenerate);
@@ -69,13 +69,17 @@ windType = jqxhr.responseJSON.wind.speed + " m/s at " + jqxhr.responseJSON.wind.
 document.getElementById("windType").innerHTML = windType;
 
 
+
+
+
+
 })
 
 </script>
 
 
 	<br><br>
-	<div class="container border border-primary" align="center">
+	<div class="container border border-primary alert alert-primary" align="center">
 	<h4>The Weather in <p id="writeLoc" style="display:inline"></h4>
 	<h5 id="weatherType">YYYYYY</h5>
 	<br><br>
@@ -88,7 +92,8 @@ document.getElementById("windType").innerHTML = windType;
 	<h5>Wind:</h5>
 	<h5 id="windType">BBBBBBBBB</h5>
 	<br><br>
-	<a href="https://maeceusman.github.io/local-weather-project/index.html">Another Location</a>
+	<a href="file:///C:/Users/malco/Documents/GitHub/local-weather-project/index.html">Another Location</a><br><br>
+	<h6 style="color:grey">No results? Make sure you search: City, Country</h6>
 	</div>
 
 
@@ -96,7 +101,6 @@ document.getElementById("windType").innerHTML = windType;
 
 
 document.getElementById("writeLoc").innerHTML = loc;
-
 
 
 
