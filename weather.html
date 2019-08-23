@@ -17,32 +17,27 @@
 
 
 
-	<title>Weather you like it or not</title>
+		<title>Weather you like it or not</title>
 </head>
 <body>
 
 
 <script>
 
+const getLocation = () => {
+	var url = window.location.href;
+	var queryStringPart = url.split('?')[1];
+	var searchParams = new URLSearchParams(queryStringPart);
+	return searchParams.get('location');
+}
 
 
-	function getParameterByName(name, url) {
-    		if (!url) url = window.location.href;
-    		name = name.replace(/[\[\]]/g, '\\$&');
-    		var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-    		    results = regex.exec(url);
-    		if (!results) return null;
-    		if (!results[2]) return '';
-		return decodeURIComponent(results[2].replace(/\+/g, ' '));
-	}
 
-var loc = getParameterByName('location');
+var loc = getLocation();
 lo = loc.replace(/ +/g, "");
 
-var linkGenerate = "http://api.openweathermap.org/data/2.5/weather?q=" + lo + "&appid=3981c7e96d55ae5a7a83fbe77d0654f5&units=metric"
+var linkGenerate = "http://api.openweathermap.org/data/2.5/weather?q=" + lo + "&appid=3981c7e96d55ae5a7a83fbe77d0654f5&units=metric";
 
-<!--to confirm the link works from the console-->
-//console.log(linkGenerate);
 
 
 
